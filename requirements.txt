@@ -1,2 +1,2 @@
 flask
-matplotlib.pyplot==3.4.3
+pygal==2.4.0
