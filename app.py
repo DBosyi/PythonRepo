@@ -18,7 +18,7 @@ def index():
     line_chart.add('Series', y)
 
     # Rendering the chart to SVG format
-    chart_svg = line_chart.render()
+    chart_svg = line_chart.render().decode().strip()
 
     # Returning the HTML page with the embedded chart SVG
     return render_template('index.html', now=datetime.now(), plot_image=chart_svg)	
