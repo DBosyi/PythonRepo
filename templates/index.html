@@ -15,9 +15,19 @@
   <h3>
     I am new to Python
   </h3>
+  <div>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".csv">
+            <input type="submit" value="Upload">
+        </form>
+  </div>
   <h1>График данных</h1>
   <div class="chart">
-        {{ plot_image | safe }}
+        {% if chart_svg %}
+            {{ chart_svg|safe }}
+        {% else %}
+            <p>No data available</p>
+        {% endif %}		
     </div>
 </body>
 </html>
