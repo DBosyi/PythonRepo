@@ -2,6 +2,12 @@
 <html>
 <head>
 	<title>Glitch test</title>
+	<style>
+        .chart {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
 	<h1>Hello, world!</h1>
@@ -10,6 +16,8 @@
     I am new to Python
   </h3>
   <h1>График данных</h1>
-  <img src="{{ plot_image }}" alt="График">
+  <div class="chart">
+        {{ plot_image | safe }}
+    </div>
 </body>
 </html>
